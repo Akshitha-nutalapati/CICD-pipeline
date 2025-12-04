@@ -23,7 +23,7 @@ const createChatLi = (message, className) => {
 // Static bot replies
 const botReplies = {
     "hello": "Hello there!",
-    "who are you": "Im a friendly chatbot.",
+    "who are you?": "Im a friendly chatbot.",
     "Thank you":"You're welcome!",
     "thanks": "No problem!",
     "help": "How can I assist you today?",
