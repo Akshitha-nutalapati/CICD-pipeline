@@ -14,9 +14,9 @@ pipeline {
                 sh '''
                 echo "Deploying files to EC2 server..."
 
-                ssh -o StrictHostKeyChecking=no -i ~/.ssh/jen_key.pem ubuntu@13.204.46.42 "sudo rm -rf /var/www/html/*"
+                ssh -o StrictHostKeyChecking=no -i jen_key.pem ubuntu@13.204.46.42 "sudo rm -rf /var/www/html/*"
 
-                scp -o StrictHostKeyChecking=no -i ~/.ssh/jen_key.pem -r * ubuntu@13.204.46.42:/var/www/html/
+                scp -o StrictHostKeyChecking=no -i jen_key.pem -r * ubuntu@13.204.46.42:/var/www/html/
 
                 echo "Deployment completed successfully."
                 '''
